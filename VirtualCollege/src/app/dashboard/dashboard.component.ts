@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NavigationOption } from './models/NavigationOption';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,6 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+
+  public navigationOptions: Array<NavigationOption> = [
+    new NavigationOption('Courses'),
+    new NavigationOption('Placeholder'),
+    new NavigationOption('Placeholder'),
+    new NavigationOption('Placeholder')
+  ];
 
   constructor() { }
 
