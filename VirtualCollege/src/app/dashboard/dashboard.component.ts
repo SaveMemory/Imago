@@ -9,8 +9,7 @@ import { NavigationOption } from './models/NavigationOption';
 export class DashboardComponent implements OnInit {
 
   public navigationOptions: Array<NavigationOption> = [
-    new NavigationOption('Courses'),
-    new NavigationOption('Placeholder'),
+    new NavigationOption('Subjects'),
     new NavigationOption('Placeholder'),
     new NavigationOption('Placeholder')
   ];
