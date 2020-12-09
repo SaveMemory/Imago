@@ -1,12 +1,16 @@
 .navigation-option {
-  background-color: aqua;
   text-align: center;
   width: 80%;
 }
 
+.navigation-option:hover {
+  cursor: pointer;
+
+}
+
 mat-drawer-container {
   min-height: 100%;
-  background-color: burlywood;
+  background-color: #deb887;
 }
 
 mat-drawer {
@@ -15,6 +19,10 @@ mat-drawer {
 
 mat-card {
   background-color: beige;
+}
+
+mat-card:hover {
+  background-color: rgb(201, 201, 181);
 }
 
 #app-title {

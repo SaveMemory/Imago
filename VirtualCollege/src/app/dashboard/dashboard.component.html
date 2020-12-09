@@ -3,7 +3,7 @@
     <h2 id="app-title">Virtual college</h2>
     <div class="options-container">
       <div class="navigation-option" *ngFor="let option of navigationOptions">
-        <mat-card>{{option.Name}}</mat-card>
+        <mat-card (click)="onMenuOptionClick(option.route)">{{option.name}}</mat-card>
       </div>
     </div>
   </mat-drawer>

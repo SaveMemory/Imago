@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from './models/Subject';
 
 @Component({
   selector: 'app-subjects',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SubjectsComponent implements OnInit {
 
-  constructor() { }
+  public subjects: Subject[] =  [new Subject(4, 'test')];
 
-  ngOnInit(): void {
+  public constructor() { }
+
+  public ngOnInit(): void {
   }
 
 }

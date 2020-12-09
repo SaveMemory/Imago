@@ -9,8 +9,7 @@ const routes: Routes = [
     children: [
       {
         path: 'subjects',
-        loadChildren: () => import('./subjects/subjects.module').then(m => m.SubjectsModule),
-        pathMatch: 'full'
+        loadChildren: () => import('./subjects/subjects.module').then(m => m.SubjectsModule)
       }
     ],
   },
