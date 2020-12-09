@@ -1,6 +1,13 @@
 <mat-drawer-container class="example-container">
   <mat-drawer mode="side" opened>
-    <div class="test">Test</div>
+    <h2 id="app-title">Virtual college</h2>
+    <div class="options-container">
+      <div class="navigation-option" *ngFor="let option of navigationOptions">
+        <mat-card (click)="onMenuOptionClick(option.route)">{{option.name}}</mat-card>
+      </div>
+    </div>
   </mat-drawer>
-  <mat-drawer-content>Main content</mat-drawer-content>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
 </mat-drawer-container>
