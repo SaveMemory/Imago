@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "VirtualCollege": {
+    "Imago": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/VirtualCollege",
+            "outputPath": "dist/Imago",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -69,18 +69,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "VirtualCollege:build"
+            "browserTarget": "Imago:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "VirtualCollege:build:production"
+              "browserTarget": "Imago:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "VirtualCollege:build"
+            "browserTarget": "Imago:build"
           }
         },
         "test": {
@@ -118,16 +118,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "VirtualCollege:serve"
+            "devServerTarget": "Imago:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "VirtualCollege:serve:production"
+              "devServerTarget": "Imago:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "VirtualCollege"
+  "defaultProject": "Imago"
 }
