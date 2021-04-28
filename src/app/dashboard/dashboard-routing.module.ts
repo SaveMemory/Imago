@@ -8,8 +8,8 @@ const routes: Routes = [
     component: DashboardComponent,
     children: [
       {
-        path: 'subjects',
-        loadChildren: () => import('./subjects/subjects.module').then(m => m.SubjectsModule)
+        path: 'kpi',
+        loadChildren: () => import('./kpi/kpi.module').then(m => m.KPIModule)
       }
     ],
   },
