@@ -1,15 +1,17 @@
 import { Boss } from "./Boss";
 
 export class Employee {
-  public Id: string;
-  public Name: string;
-  public Surname: string;
-  public Boss: Boss;
+  public id: string;
+  public name: string;
+  public surname: string;
+  public boss?: Boss;
+  public workforce: number;
 
-  constructor(id: string, name: string, surname: string, boss: Boss) {
-    this.Id = id;
-    this.Name = name;
-    this.Surname = surname;
-    this.Boss = boss;
+  constructor(id: string, name: string, surname: string,  workforce: number, boss?: Boss) {
+    this.id = id;
+    this.name = name;
+    this.surname = surname;
+    this.boss = boss;
+    this.workforce = workforce
   }
 }
