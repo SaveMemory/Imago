@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Boss } from 'src/app/domain-models/Boss';
+import { Client } from 'src/app/domain-models/Client';
 import { Team } from 'src/app/domain-models/Team';
 import { Cost } from '../models/Cost';
 
@@ -12,6 +13,7 @@ export class KPIComponent implements OnInit {
 
   public teamsList: Array<Team>;
   public costsList: Array<Cost>;
+  public clientList: Array<Client>
 
   constructor() {
     this.teamsList = [
@@ -46,7 +48,13 @@ export class KPIComponent implements OnInit {
       new Cost(400, "Alcohol", "Party"),
       new Cost(140, "Lcd monitor", "Resources"),
       new Cost(50, "Toilet paper", "Administration")
-    ]
+    ];
+
+    this.clientList = [
+      new Client('Lidl'),
+      new Client('Biedronka'),
+      new Client('Zabka')
+    ];
   }
 
   public ngOnInit(): void {

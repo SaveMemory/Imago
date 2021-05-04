@@ -8,12 +8,14 @@ import { TeamsListComponent } from './teams-list/teams-list.component';
 import { MatListModule } from '@angular/material/list';
 import { CostsListComponent } from './costs-list/costs-list.component';
 import { MatDividerModule } from '@angular/material/divider';
+import { ClientsListComponent } from './clients-list/clients-list.component';
 
 @NgModule({
   declarations: [
     KPIComponent,
     TeamsListComponent,
-    CostsListComponent
+    CostsListComponent,
+    ClientsListComponent
   ],
   imports: [
     CommonModule,
