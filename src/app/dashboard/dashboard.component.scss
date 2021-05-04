@@ -10,7 +10,7 @@
 
 mat-drawer-container {
   min-height: 100%;
-  background-color: #deb887;
+  background-color: #cfbfab;
 }
 
 mat-drawer {
@@ -22,7 +22,7 @@ mat-card {
 }
 
 mat-card:hover {
-  background-color: rgb(201, 201, 181);
+  background-color: rgb(218, 218, 202);
 }
 
 #app-title {
@@ -36,4 +36,8 @@ mat-card:hover {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+}
+
+mat-drawer-container {
+  height: 100%;
 }
