@@ -10,11 +10,10 @@ import { NavigationOption } from './models/NavigationOption';
 export class DashboardComponent implements OnInit {
 
   public navigationOptions: Array<NavigationOption> = [
-    new NavigationOption('Subjects', 'subjects'),
+    new NavigationOption('KPI', 'kpi'),
     new NavigationOption('Placeholder', ''),
     new NavigationOption('Placeholder', '')
   ];
-
 
   public constructor(private router: Router, private route: ActivatedRoute) { }
 
