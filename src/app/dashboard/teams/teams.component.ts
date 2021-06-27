@@ -22,7 +22,6 @@ export class TeamsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
   }
-
 }

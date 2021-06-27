@@ -14,8 +14,9 @@ export class Team {
     this.size = size;
     this.boss = boss;
     this.members = new Array<Employee>();
-    this.members.forEach(member => {
-      this.jointWorkforce += member.workforce;
-    });
+  }
+
+  public addMember(member: Employee): void {
+    this.members.push(member);
   }
 }

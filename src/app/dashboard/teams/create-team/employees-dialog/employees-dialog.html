@@ -1,0 +1,12 @@
+<h1 mat-dialog-title>Available employees</h1>
+<div mat-dialog-content>
+  Choose employees
+
+  <ng-container *ngFor="let employee of data.employees">
+    <mat-checkbox class="employee"
+    (change)="changeEmployeeState($event.checked, employee)">
+      {{employee.name}} <br> {{employee.surname}}
+    </mat-checkbox>
+  </ng-container>
+
+</div>

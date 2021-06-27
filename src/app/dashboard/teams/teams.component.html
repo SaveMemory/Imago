@@ -2,7 +2,7 @@
 <div class="teams-container">
 
   <div class="team-view">
-    <button (click)="navigateToTeamCreation()" mat-raised-button color="primary">Create team</button>
+    <button routerLink='./create' mat-raised-button color="primary">Create team</button>
   </div>
 
   <table mat-table [dataSource]="teams" class="mat-elevation-z8 team-view">
