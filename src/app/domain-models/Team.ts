@@ -19,4 +19,8 @@ export class Team {
   public addMember(member: Employee): void {
     this.members.push(member);
   }
+
+  public addMultipleMembers(members: Array<Employee>): void {
+    this.members = members;
+  }
 }

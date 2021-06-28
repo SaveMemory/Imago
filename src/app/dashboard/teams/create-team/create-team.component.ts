@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { Boss } from 'src/app/domain-models/Boss';
 import { Employee } from 'src/app/domain-models/Employee';
+import { Team } from 'src/app/domain-models/Team';
+import { TeamsService } from '../services/teams.service';
 import { EmployeesDialog } from './employees-dialog/employees-dialog';
 
 @Component({
@@ -13,7 +16,7 @@ import { EmployeesDialog } from './employees-dialog/employees-dialog';
 export class CreateTeamComponent implements OnInit {
 
   public createTeamForm: FormGroup = new FormGroup({
-    name: new FormControl(''),
+    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
     size: new FormControl(0),
     boss: new FormControl(null)
   });
@@ -24,7 +27,7 @@ export class CreateTeamComponent implements OnInit {
 
   public chosenEmployees: Array<Employee> = [];
 
-  public constructor(public dialog: MatDialog) {
+  public constructor(public dialog: MatDialog, private router: Router, private teamsService: TeamsService) {
     this.availableBosses =
     [
       new Boss('testId1', 'Arkadiusz', 'Kowalski'),
@@ -55,5 +58,15 @@ export class CreateTeamComponent implements OnInit {
       this.chosenEmployees = result;
     });
   };
+
+  public createTeam(): void {
+
+    let team = new Team('', this.createTeamForm.controls['name'].value,
+      this.createTeamForm.controls['size'].value,
+      this.createTeamForm.controls['boss'].value);
+
+    team.addMultipleMembers(this.chosenEmployees);
+    this.teamsService.create(team).subscribe();
+  }
 
 }

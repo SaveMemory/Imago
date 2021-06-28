@@ -1,5 +1,5 @@
 import { Component, Inject } from "@angular/core";
-import { MAT_DIALOG_DATA } from "@angular/material/dialog";
+import { MatDialogRef, MAT_DIALOG_DATA } from "@angular/material/dialog";
 import { Employee } from "src/app/domain-models/Employee";
 import { EmployeesDialogData } from "./employees-dialog-data";
 
@@ -12,7 +12,8 @@ export class EmployeesDialog {
 
   public markedEmployees: Array<Employee> = new Array<Employee>();
 
-  constructor(@Inject(MAT_DIALOG_DATA) public data: EmployeesDialogData) {}
+  constructor(public dialogRef: MatDialogRef<EmployeesDialog>,
+    @Inject(MAT_DIALOG_DATA) public data: EmployeesDialogData) {}
 
   public changeEmployeeState(checkedStatus: boolean, employee: Employee): void {
 
@@ -21,13 +22,15 @@ export class EmployeesDialog {
     : this.removeEmployee(employee.id);
   }
 
-  private removeEmployee(employeeId: string): void {
+  public onCancelClick() {
+    this.dialogRef.close();
+  }
 
+  private removeEmployee(employeeId: string): void {
     this.markedEmployees.forEach(employee => {
       if(employee.id === employeeId) {
         this.markedEmployees.splice(this.markedEmployees.indexOf(employee, 1));
       }
     });
-
   }
 }

@@ -7,6 +7,7 @@
       <mat-form-field class="example-full-width">
         <mat-label>Name</mat-label>
         <input formControlName="name" matInput placeholder="My team" value="">
+        <mat-error *ngIf="createTeamForm.controls['name'].invalid">Name must be at least 3 characters long</mat-error>
       </mat-form-field>
     </div>
 
@@ -14,6 +15,7 @@
       <mat-form-field class="example-full-width">
         <mat-label>Size</mat-label>
         <input formControlName="size" type="number" matInput placeholder="0" value="">
+        <mat-error *ngIf="createTeamForm.controls['size'].invalid">Size must be bigger than 2</mat-error>
       </mat-form-field>
     </div>
 
@@ -28,6 +30,8 @@
     </mat-form-field>
   </form>
 
-  <button mat-button (click)="openEmployeesDialog()">Choose employees</button>
-
+  <div class="buttons">
+    <button mat-raised-button (click)="openEmployeesDialog()">Choose employees</button>
+    <button mat-raised-button color="primary" (click)="createTeam()">Create</button>
+  </div>
 </div>

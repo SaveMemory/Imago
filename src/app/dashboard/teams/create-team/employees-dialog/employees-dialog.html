@@ -9,4 +9,7 @@
     </mat-checkbox>
   </ng-container>
 
+  <button mat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="markedEmployees" cdkFocusInitial>Ok</button>
+
 </div>
