@@ -14,4 +14,8 @@ export class Employee {
     this.boss = boss;
     this.workforce = workforce
   }
+
+  public setBoss(boss: Boss): void {
+    this.boss = boss;
+  }
 }

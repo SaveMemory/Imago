@@ -10,6 +10,10 @@ const routes: Routes = [
       {
         path: 'kpi',
         loadChildren: () => import('./kpi/kpi.module').then(m => m.KPIModule)
+      },
+      {
+        path: 'teams',
+        loadChildren: () => import('./teams/teams.module').then(m => m.TeamsModule)
       }
     ],
   },

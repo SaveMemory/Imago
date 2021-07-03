@@ -14,7 +14,17 @@ export class Team {
     this.size = size;
     this.boss = boss;
     this.members = new Array<Employee>();
-    this.members.forEach(member => {
+  }
+
+  public addMember(member: Employee): void {
+    this.members.push(member);
+    this.jointWorkforce += member.workforce;
+  }
+
+  public addMultipleMembers(members: Array<Employee>): void {
+    this.members = members;
+    this.jointWorkforce = 0;
+    members.forEach(member => {
       this.jointWorkforce += member.workforce;
     });
   }
