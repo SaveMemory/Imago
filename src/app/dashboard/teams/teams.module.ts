@@ -11,6 +11,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { EmployeesDialog } from './create-team/employees-dialog/employees-dialog';
+import { HttpClientModule } from '@angular/common/http';
+import { TeamsService } from './services/teams.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [TeamsComponent, CreateTeamComponent, EmployeesDialog],
@@ -23,7 +26,11 @@ import { EmployeesDialog } from './create-team/employees-dialog/employees-dialog
     MatFormFieldModule,
     MatSelectModule,
     MatDialogModule,
-    MatCheckboxModule
-  ]
+    MatCheckboxModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
+  ],
+  providers: [TeamsService]
 })
 export class TeamsModule { }

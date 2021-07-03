@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Boss } from 'src/app/domain-models/Boss';
@@ -16,10 +16,11 @@ import { EmployeesDialog } from './employees-dialog/employees-dialog';
 export class CreateTeamComponent implements OnInit {
 
   public createTeamForm: FormGroup = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    name: new FormControl(''),
     size: new FormControl(0),
     boss: new FormControl(null)
   });
+
 
   public availableBosses: Array<Boss>;
 
@@ -61,11 +62,14 @@ export class CreateTeamComponent implements OnInit {
 
   public createTeam(): void {
 
+debugger
+
     let team = new Team('', this.createTeamForm.controls['name'].value,
       this.createTeamForm.controls['size'].value,
       this.createTeamForm.controls['boss'].value);
 
     team.addMultipleMembers(this.chosenEmployees);
+
     this.teamsService.create(team).subscribe();
   }
 

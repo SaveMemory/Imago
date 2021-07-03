@@ -18,9 +18,14 @@ export class Team {
 
   public addMember(member: Employee): void {
     this.members.push(member);
+    this.jointWorkforce += member.workforce;
   }
 
   public addMultipleMembers(members: Array<Employee>): void {
     this.members = members;
+    this.jointWorkforce = 0;
+    members.forEach(member => {
+      this.jointWorkforce += member.workforce;
+    });
   }
 }
