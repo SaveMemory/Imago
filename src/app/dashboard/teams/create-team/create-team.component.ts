@@ -61,9 +61,6 @@ export class CreateTeamComponent implements OnInit {
   };
 
   public createTeam(): void {
-
-debugger
-
     let team = new Team('', this.createTeamForm.controls['name'].value,
       this.createTeamForm.controls['size'].value,
       this.createTeamForm.controls['boss'].value);
