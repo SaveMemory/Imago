@@ -4,10 +4,10 @@ import { Team } from 'src/app/domain-models/Team';
 
 @Component({
   selector: 'app-teams',
-  templateUrl: './teams.component.html',
+  templateUrl: './employees.component.html',
   styleUrls: ['./teams.component.scss']
 })
-export class TeamsComponent implements OnInit {
+export class EmployeesComponent implements OnInit {
 
   columns: string[] = [
     'name', 'size', 'boss', 'workforce'

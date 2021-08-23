@@ -13,7 +13,7 @@ const routes: Routes = [
       },
       {
         path: 'teams',
-        loadChildren: () => import('./teams/teams.module').then(m => m.TeamsModule)
+        loadChildren: () => import('./teams/employees.module').then(m => m.EmployeesModule)
       }
     ],
   },

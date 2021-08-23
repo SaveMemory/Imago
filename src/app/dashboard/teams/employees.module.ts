@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
-import { TeamsRoutingModule } from './teams-routing.module';
-import { TeamsComponent } from './teams.component';
+import { EmployeesRoutingModule } from './employees-routing.module';
+import { EmployeesComponent } from './teams.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -16,10 +16,10 @@ import { TeamsService } from './services/teams.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [TeamsComponent, CreateTeamComponent, EmployeesDialog],
+  declarations: [EmployeesComponent, CreateTeamComponent, EmployeesDialog],
   imports: [
     CommonModule,
-    TeamsRoutingModule,
+    EmployeesRoutingModule,
     MatTableModule,
     MatButtonModule,
     MatInputModule,
@@ -33,4 +33,4 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   ],
   providers: [TeamsService]
 })
-export class TeamsModule { }
+export class EmployeesModule { }

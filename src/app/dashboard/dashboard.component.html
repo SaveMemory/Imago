@@ -1,13 +1,8 @@
-<mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>
-    <h2 id="app-title">Imago</h2>
-    <div class="options-container">
-      <div class="navigation-option" *ngFor="let option of navigationOptions">
-        <mat-card (click)="onMenuOptionClick(option.route)">{{option.name}}</mat-card>
-      </div>
-    </div>
-  </mat-drawer>
-    <mat-drawer-content>
-      <router-outlet></router-outlet>
-    </mat-drawer-content>
-</mat-drawer-container>
+<nav mat-tab-nav-bar >
+  <a mat-tab-link *ngFor="let option of navigationOptions"
+     (click)="onMenuOptionClick(option.route)"
+     > {{ option.name }} </a>
+</nav>
+
+<router-outlet></router-outlet>
+<span>IMAGO</span>
