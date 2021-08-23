@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Observable, of } from 'rxjs';
 import { Employee } from 'src/app/domain-models/Employee';
-import { TeamsService } from '../services/teams.service';
+import { EmployeesService } from '../services/employees.service';
 import { CreateTeamComponent } from './create-team.component';
 
 describe('CreateTeamComponent', () => {
@@ -26,7 +26,7 @@ describe('CreateTeamComponent', () => {
       providers: [
         { provide: MatDialog, useValue: employeeDialogSpy },
         { provide: Router, useValue: routerSpy},
-        { provide: TeamsService, useValue: teamsServiceSpy}
+        { provide: EmployeesService, useValue: teamsServiceSpy}
       ]
     });
 

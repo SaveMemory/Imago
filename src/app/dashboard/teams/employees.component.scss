@@ -1,0 +1,18 @@
+.employees-container {
+  flex-direction: column;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+
+  .employee-view {
+    width: 90%;
+    margin: auto;
+    margin-top: 3rem;
+  }
+
+  .employees-table {
+    margin-top: 10px;
+    width: 80%;
+  }
+}

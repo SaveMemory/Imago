@@ -1,11 +1,10 @@
+<div class="employees-container">
 
-<div class="teams-container">
-
-  <div class="team-view">
-    <button routerLink='./create' mat-raised-button color="primary">Create team</button>
+  <div class="employee-view">
+    <button routerLink='./create' mat-raised-button color="primary">Hire employee</button>
   </div>
 
-  <table mat-table [dataSource]="teams" class="mat-elevation-z8 team-view">
+  <table mat-table [dataSource]="teams" class="mat-elevation-z8 employees-table">
 
     <ng-container matColumnDef="name">
       <th mat-header-cell *matHeaderCellDef> Name </th>

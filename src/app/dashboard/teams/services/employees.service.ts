@@ -6,7 +6,7 @@ import { Team } from 'src/app/domain-models/Team';
 @Injectable({
   providedIn: 'root'
 })
-export class TeamsService {
+export class EmployeesService {
 
   constructor(private httpClient: HttpClient) { }
 

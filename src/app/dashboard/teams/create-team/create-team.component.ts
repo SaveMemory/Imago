@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 import { Boss } from 'src/app/domain-models/Boss';
 import { Employee } from 'src/app/domain-models/Employee';
 import { Team } from 'src/app/domain-models/Team';
-import { TeamsService } from '../services/teams.service';
+import { EmployeesService } from '../services/employees.service';
 import { EmployeesDialog } from './employees-dialog/employees-dialog';
 
 @Component({
@@ -28,7 +28,7 @@ export class CreateTeamComponent implements OnInit {
 
   public chosenEmployees: Array<Employee> = [];
 
-  public constructor(public dialog: MatDialog, private router: Router, private teamsService: TeamsService) {
+  public constructor(public dialog: MatDialog, private router: Router, private teamsService: EmployeesService) {
     this.availableBosses =
     [
       new Boss('testId1', 'Arkadiusz', 'Kowalski'),

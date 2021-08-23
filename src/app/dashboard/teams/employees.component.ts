@@ -3,9 +3,9 @@ import { Employee } from 'src/app/domain-models/Employee';
 import { Team } from 'src/app/domain-models/Team';
 
 @Component({
-  selector: 'app-teams',
+  selector: 'app-employees',
   templateUrl: './employees.component.html',
-  styleUrls: ['./teams.component.scss']
+  styleUrls: ['./employees.component.scss']
 })
 export class EmployeesComponent implements OnInit {
 

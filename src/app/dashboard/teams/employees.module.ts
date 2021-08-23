@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';
 import { EmployeesRoutingModule } from './employees-routing.module';
-import { EmployeesComponent } from './teams.component';
+import { EmployeesComponent } from './employees.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -12,7 +12,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { EmployeesDialog } from './create-team/employees-dialog/employees-dialog';
 import { HttpClientModule } from '@angular/common/http';
-import { TeamsService } from './services/teams.service';
+import { EmployeesService } from './services/employees.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
@@ -31,6 +31,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     FormsModule
   ],
-  providers: [TeamsService]
+  providers: [EmployeesService]
 })
 export class EmployeesModule { }
