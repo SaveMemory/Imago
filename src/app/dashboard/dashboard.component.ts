@@ -11,7 +11,7 @@ export class DashboardComponent implements OnInit {
 
   public navigationOptions: Array<NavigationOption> = [
     new NavigationOption('KPI', 'kpi'),
-    new NavigationOption('Teams', 'teams'),
+    new NavigationOption('Employees', 'employees'),
     new NavigationOption('Placeholder', '')
   ];
 

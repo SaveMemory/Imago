@@ -6,17 +6,16 @@ import { EmployeesComponent } from './employees.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { CreateTeamComponent } from './create-team/create-team.component';
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { EmployeesDialog } from './create-team/employees-dialog/employees-dialog';
 import { HttpClientModule } from '@angular/common/http';
 import { EmployeesService } from './services/employees.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HireEmployeesComponent } from './hire-employees/hire-employees.component';
 
 @NgModule({
-  declarations: [EmployeesComponent, CreateTeamComponent, EmployeesDialog],
+  declarations: [EmployeesComponent, HireEmployeesComponent, HireEmployeesComponent],
   imports: [
     CommonModule,
     EmployeesRoutingModule,

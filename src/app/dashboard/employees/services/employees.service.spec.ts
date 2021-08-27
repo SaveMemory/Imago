@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Team } from 'src/app/domain-models/Team';
+import { Employee } from 'src/app/domain-models/Employee';
 import { EmployeesService } from './employees.service';
 
 describe('EmployeesService', () => {
@@ -18,7 +18,7 @@ describe('EmployeesService', () => {
 
   it('when create should call http client post method', () => {
 
-    let testTeam = new Team('testTeam', 'crickets', 3, null as any);
+    let testTeam = new Employee('testID', 'testTeam', 'crickets', 5);
 
     service.create(testTeam);
 
