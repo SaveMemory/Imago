@@ -1,43 +1,10 @@
-.navigation-option {
-  text-align: center;
-  width: 80%;
-}
 
-.navigation-option:hover {
-  cursor: pointer;
-
-}
-
-mat-drawer-container {
-  min-height: 100%;
-  background-color: #cfbfab;
-}
-
-mat-drawer {
-  background-color: rgb(49, 48, 48);
-}
-
-mat-card {
-  background-color: beige;
-}
-
-mat-card:hover {
-  background-color: rgb(218, 218, 202);
-}
-
-#app-title {
-  margin: 10px;
-  color: beige;
-}
-
-.options-container {
-  height: 40%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-mat-drawer-container {
-  height: 100%;
+span {
+  z-index: -1;
+  position: absolute;
+  left: 3%;
+  top: 55%;
+  font-size: 40em;
+  color: #eceef1;
+  font-weight: 900;
 }

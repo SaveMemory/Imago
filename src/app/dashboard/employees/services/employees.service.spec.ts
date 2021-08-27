@@ -1,15 +1,15 @@
 import { HttpClient } from '@angular/common/http';
-import { Team } from 'src/app/domain-models/Team';
-import { TeamsService } from './teams.service';
+import { Employee } from 'src/app/domain-models/Employee';
+import { EmployeesService } from './employees.service';
 
-describe('TeamsService', () => {
-  let service: TeamsService;
+describe('EmployeesService', () => {
+  let service: EmployeesService;
   let httpSpy: HttpClient;
 
   beforeEach(() => {
     httpSpy = jasmine.createSpyObj('HttpClient', ['post']);
 
-    service = new TeamsService(httpSpy);
+    service = new EmployeesService(httpSpy);
   });
 
   it('should be created', () => {
@@ -18,7 +18,7 @@ describe('TeamsService', () => {
 
   it('when create should call http client post method', () => {
 
-    let testTeam = new Team('testTeam', 'crickets', 3, null as any);
+    let testTeam = new Employee('testID', 'testTeam', 'crickets', 5);
 
     service.create(testTeam);
 

@@ -2,12 +2,12 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 
-import { TeamsComponent } from './teams.component';
+import { EmployeesComponent } from './employees.component';
 
 
-describe('TeamsComponent', () => {
-  let component: TeamsComponent;
-  let fixture: ComponentFixture<TeamsComponent>;
+describe('EmployeesComponent', () => {
+  let component: EmployeesComponent;
+  let fixture: ComponentFixture<EmployeesComponent>;
   let router: Router;
 
 
@@ -19,7 +19,7 @@ describe('TeamsComponent', () => {
       ]
     }).compileComponents();
 
-    fixture = TestBed.createComponent(TeamsComponent);
+    fixture = TestBed.createComponent(EmployeesComponent);
 
     component = fixture.componentInstance;
 
