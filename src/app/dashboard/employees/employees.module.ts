@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { EmployeesService } from './services/employees.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HireEmployeesComponent } from './hire-employees/hire-employees.component';
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [EmployeesComponent, HireEmployeesComponent, HireEmployeesComponent],
@@ -28,7 +29,8 @@ import { HireEmployeesComponent } from './hire-employees/hire-employees.componen
     MatCheckboxModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    MatCardModule
   ],
   providers: [EmployeesService]
 })
