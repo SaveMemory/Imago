@@ -14,6 +14,7 @@ import { EmployeesService } from './services/employees.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HireEmployeesComponent } from './hire-employees/hire-employees.component';
 
+
 @NgModule({
   declarations: [EmployeesComponent, HireEmployeesComponent, HireEmployeesComponent],
   imports: [

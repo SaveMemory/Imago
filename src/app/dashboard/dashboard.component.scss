@@ -8,3 +8,29 @@ span {
   color: #eceef1;
   font-weight: 900;
 }
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+
+  .router-container {
+    height: 70%;
+  }
+
+  .kpi-container {
+    display: flex;
+    justify-content: center;
+
+    .kpi-section {
+      width: 30%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      background-color: #3f51b5;
+      color: aliceblue;
+    }
+  }
+}
+

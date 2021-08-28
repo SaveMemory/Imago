@@ -3,6 +3,35 @@
      (click)="onMenuOptionClick(option.route)"
      > {{ option.name }} </a>
 </nav>
+<div class="dashboard-container">
+<div class="router-container">
+  <router-outlet></router-outlet>
 
-<router-outlet></router-outlet>
+</div>
+
+  <div class="kpi-container">
+    <mat-card class="kpi-section">
+      <div class="capital">
+        <h3>Capital</h3>
+        {{kpi.capital}}
+      </div>
+
+      <div class="income">
+        <h3>Income/day</h3>
+        {{kpi.dailyIncome}}
+      </div>
+
+      <div class="cost">
+        <h3>Cost/day</h3>
+        {{kpi.cost}}
+      </div>
+
+      <div class="growth">
+        <h3>Growth/day</h3>
+        {{kpi.dailyGrowth}}
+      </div>
+    </mat-card>
+  </div>
+</div>
+
 <span>IMAGO</span>
