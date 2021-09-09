@@ -8,15 +8,11 @@ import { Employee } from 'src/app/domain-models/Employee';
 })
 export class EmployeesComponent implements OnInit {
 
-  columns: string[] = [
-    'forename', 'surname', 'workforce'
-  ]
-
   public employees: Array<Employee> = [
-    new Employee('testBossId', "Janusz", "Kowalski", 0),
-    new Employee('testBossId', "Jan", "Kowalski", 0),
-    new Employee('testBossId', "Jerzy", "Kowalski", 0),
-    new Employee('testBossId', "Jacek", "Kowalski", 0)
+    new Employee('testBossId', "Janusz", "Kowalski", 5),
+    new Employee('testBossId', "Jan", "Kowalski", 5),
+    new Employee('testBossId', "Jerzy", "Kowalski", 5),
+    new Employee('testBossId', "Jacek", "Kowalski", 5)
   ];
 
   constructor() { }
