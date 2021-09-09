@@ -13,10 +13,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { EmployeesService } from './services/employees.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HireEmployeesComponent } from './hire-employees/hire-employees.component';
+import { EmployeesListComponent } from './shared/employees-list/employees-list.component';
 
 
 @NgModule({
-  declarations: [EmployeesComponent, HireEmployeesComponent, HireEmployeesComponent],
+  declarations: [EmployeesComponent, HireEmployeesComponent, HireEmployeesComponent, EmployeesListComponent],
   imports: [
     CommonModule,
     EmployeesRoutingModule,
