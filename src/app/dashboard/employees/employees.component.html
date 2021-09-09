@@ -4,7 +4,7 @@
     <button routerLink='./create' mat-raised-button color="primary">Hire employees</button>
   </div>
   <div class="content">
-    <app-employees-list [employees]=employees></app-employees-list>
+    <app-employees-list [employees]="employees" [isHiringView]="false"></app-employees-list>
   </div>
 </div>
 

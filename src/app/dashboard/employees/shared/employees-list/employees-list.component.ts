@@ -11,6 +11,9 @@ export class EmployeesListComponent implements OnInit {
   @Input()
   public employees: Array<Employee> = new Array<Employee>();
 
+  @Input()
+  public isHiringView: boolean = false;
+
   columns: string[] = [
     'forename', 'surname', 'workforce'
   ]
@@ -18,6 +21,10 @@ export class EmployeesListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    if(this.isHiringView)
+      this.columns = [
+        'forename', 'surname', 'workforce', 'action'
+      ];
   }
 
 
