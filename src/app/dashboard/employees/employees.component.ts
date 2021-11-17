@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Guid } from 'guid-typescript';
 import { Employee } from 'src/app/domain-models/Employee';
+import { EmployeesService } from './services/employees.service';
 
 @Component({
   selector: 'app-employees',
@@ -15,8 +17,11 @@ export class EmployeesComponent implements OnInit {
     new Employee('testBossId', "Jacek", "Kowalski", 5)
   ];
 
-  constructor() { }
+  private userId: Guid = Guid.parse("3134d4fc-bb10-4d07-ad3c-3c7d69939d5b");
+
+  constructor(private employeesService: EmployeesService) { }
 
   public ngOnInit(): void {
+    this.employeesService.getAllEmployeesForUser(this.userId).subscribe((result: Array<Employee>) => this.employees = result);
   }
 }

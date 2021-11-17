@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Guid } from 'guid-typescript';
 import { Observable } from 'rxjs';
 import { Employee } from 'src/app/domain-models/Employee';
 
@@ -10,8 +11,7 @@ export class EmployeesService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public create(team: Employee): Observable<Employee> {
-
-    return this.httpClient.post<Employee>('https://localhost:5001/team', team);
+  public getAllEmployeesForUser(id: Guid): Observable<Array<Employee>> {
+    return this.httpClient.get<Array<Employee>>(`https://localhost:5001/api/employees/${id}`);
   }
 }
