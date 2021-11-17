@@ -25,6 +25,8 @@ export class EmployeesListComponent implements OnInit {
       this.columns = [
         'forename', 'surname', 'workforce', 'action'
       ];
+
+    
   }
 
 
